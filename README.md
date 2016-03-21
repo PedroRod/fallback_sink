@@ -23,7 +23,7 @@ spdlog provides multiple sinks:
 * Syslog (linux)
 * and many others
 
-Please note that this sink will only use one logger at a time and will only use the next available if the current sink fails.
+Please note that this sink will only use one sink to log at a time and will only use the next available if the current sink fails.
 
-So for example, Lets use the snippet provided above, This log will contain 4 sinks (1 will be in use and 3 as fallbacks).
+So for example, Lets use the snippet provided above, This logger will contain 4 sinks (1 will be in use and 3 as fallbacks).
 In case of an error while trying to log into the sqlite database, the logger will flush and remove the sqlite sink form the list and continue to log with the next available sink (simple_file_sink), and so forth.
